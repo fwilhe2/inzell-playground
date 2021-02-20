@@ -18,6 +18,7 @@ jobs:
     - name: Calculate
       run: |
         kotlin -cp /home/runner/.m2/repository/com/github/fwilhe/inzell/inzell-jvm/0.0.3.norelease/inzell-jvm-0.0.3.norelease.jar -howtorun .main.kts PerformanceModel.main.kts
+    - run: cat foo.md
     - name: foo
       run: |
         kotlin -howtorun .main.kts foo

@@ -33,4 +33,6 @@ fun main() {
         add(speedup)
         add(efficiency)
     }
+
+    java.io.File("foo.md").writeText(MarkdownPrinter(sheet))
 }
