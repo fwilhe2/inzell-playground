@@ -1,0 +1,22 @@
+name: CI
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: fwilhe2/setup-kotlin@main
+    - name: Install Inzell Devel version
+      run: |
+        git clone -b master https://github.com/fwilhe2/Inzell
+        cd Inzell
+        ./gradlew publishToMavenLocal
+    - name: Calculate
+      run: |
+        kotlin -howtorun .main.kts PerformanceModel.main.kts
+    - name: foo
+      run: |
+        kotlin -howtorun .main.kts foo
