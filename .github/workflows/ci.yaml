@@ -8,4 +8,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+    - uses: fwilhe2/setup-kotlin@main
     - uses: fwilhe2/inzell-action@main
