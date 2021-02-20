@@ -34,5 +34,5 @@ fun main() {
         add(efficiency)
     }
 
-    java.io.File("foo.md").writeText(MarkdownPrinter(sheet))
+    java.io.File("foo.md").writeText(MarkdownPrinter(sheet).toString())
 }
