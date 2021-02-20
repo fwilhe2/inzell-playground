@@ -16,7 +16,7 @@ jobs:
         ./gradlew publishToMavenLocal
     - name: Calculate
       run: |
-        kotlin -howtorun .main.kts PerformanceModel.main.kts
+        kotlin -cp $HOME/.m2/repository/com/github/fwilhe/inzell/Inzell-jvm/0.1.0-SNAPSHOT/Inzell-jvm-0.1.0-SNAPSHOT.jar -howtorun .main.kts PerformanceModel.main.kts
     - name: foo
       run: |
         kotlin -howtorun .main.kts foo
